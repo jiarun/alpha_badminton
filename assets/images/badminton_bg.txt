@@ -1,0 +1,12 @@
+This is a placeholder for the badminton background image.
+
+Please replace this file with an actual image file named 'badminton_bg.jpg'.
+The image should be a high-quality photograph of a badminton court, players, or shuttlecocks.
+
+For best results:
+1. Use an image with resolution of at least 1920x1080 pixels
+2. Make sure the image is not too busy or distracting
+3. Choose an image with good contrast so text will be readable when overlaid
+4. Landscape orientation works best for most devices
+
+After adding the image, rebuild the app to see the changes.

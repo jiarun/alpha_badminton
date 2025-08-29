@@ -1,0 +1,18 @@
+{
+  "name": "aug25_alpha",
+  "version": "1.0.0",
+  "description": "Flutter application with Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flutter",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC"
+}
