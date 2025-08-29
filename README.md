@@ -1,4 +1,4 @@
-# aug25_alpha
+# Alpha_Badminton
 
 A new Flutter project.
 
