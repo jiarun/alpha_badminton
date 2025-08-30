@@ -6,6 +6,7 @@ import 'services/authentication_service.dart';
 import 'screens/login_screen.dart';
 import 'services/api_service.dart';
 import 'services/match_service.dart';
+import 'app/app_routes.dart';
 
 Future<void> main() async {
   // Ensure Flutter is initialized
@@ -28,8 +29,14 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider<ApiService>(create: (_) => ApiService()),
-        ChangeNotifierProvider<AuthenticationService>(create: (_) => AuthenticationService()),
-        ChangeNotifierProvider<MatchService>(create: (_) => MatchService()),
+        ChangeNotifierProvider<AuthenticationService>(
+          create: (_) => AuthenticationService(),
+          lazy: false,
+        ),
+        ChangeNotifierProvider<MatchService>(
+          create: (_) => MatchService(),
+          lazy: false,
+        ),
       ],
       child: MaterialApp(
         title: 'Alpha Badminton',
@@ -37,7 +44,12 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: ThemeMode.system,
-        home: const App(), // Use App instead of LoginScreen
+        initialRoute: '/',
+        routes: {
+          '/': (context) => LoginScreen(),
+          // Other routes will be handled by AppRoutes.onGenerateRoute
+        },
+        onGenerateRoute: AppRoutes.onGenerateRoute,
       ),
     );
   }

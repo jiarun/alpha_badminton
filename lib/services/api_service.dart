@@ -30,7 +30,7 @@ class ApiService {
     }
 
     // Default production URL (this should be overridden by environment variable)
-    return 'https://your-render-app.onrender.com';
+    return 'https://alpha-badminton.onrender.com';
   }
 
   // POST request
