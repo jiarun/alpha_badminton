@@ -364,40 +364,43 @@ class _MatchSetupScreenState extends State<MatchSetupScreen> {
                                                 ..._players.map((player) {
                                                   return DropdownMenuItem<String>(
                                                     value: player['id'].toString(),
-                                                    child: Row(
-                                                      children: [
-                                                        // Profile picture
-                                                        Container(
-                                                          width: 30,
-                                                          height: 30,
-                                                          margin: EdgeInsets.only(right: 10),
-                                                          decoration: BoxDecoration(
-                                                            shape: BoxShape.circle,
-                                                            border: Border.all(
-                                                              color: AppTheme.primaryColor,
-                                                              width: 1,
+                                                    child: ConstrainedBox(
+                                                      constraints: BoxConstraints(maxWidth: 300), 
+                                                      child: Row(
+                                                        children: [
+                                                          // Profile picture
+                                                          Container(
+                                                            width: 30,
+                                                            height: 30,
+                                                            margin: EdgeInsets.only(right: 10),
+                                                            decoration: BoxDecoration(
+                                                              shape: BoxShape.circle,
+                                                              border: Border.all(
+                                                                color: AppTheme.primaryColor,
+                                                                width: 1,
+                                                              ),
+                                                            ),
+                                                            child: ClipOval(
+                                                              child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
+                                                                  ? Image.network(
+                                                                      player['profile_picture'],
+                                                                      fit: BoxFit.cover,
+                                                                      errorBuilder: (context, error, stackTrace) {
+                                                                        return _buildDefaultAvatar(small: true);
+                                                                      },
+                                                                    )
+                                                                  : _buildDefaultAvatar(small: true),
                                                             ),
                                                           ),
-                                                          child: ClipOval(
-                                                            child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
-                                                                ? Image.network(
-                                                                    player['profile_picture'],
-                                                                    fit: BoxFit.cover,
-                                                                    errorBuilder: (context, error, stackTrace) {
-                                                                      return _buildDefaultAvatar(small: true);
-                                                                    },
-                                                                  )
-                                                                : _buildDefaultAvatar(small: true),
+                                                          // Player name
+                                                          Expanded(
+                                                            child: Text(
+                                                              player['name'],
+                                                              overflow: TextOverflow.ellipsis,
+                                                            ),
                                                           ),
-                                                        ),
-                                                        // Player name
-                                                        Expanded(
-                                                          child: Text(
-                                                            player['name'],
-                                                            overflow: TextOverflow.ellipsis,
-                                                          ),
-                                                        ),
-                                                      ],
+                                                        ],
+                                                      ),
                                                     ),
                                                   );
                                                 }).toList(),
@@ -527,40 +530,43 @@ class _MatchSetupScreenState extends State<MatchSetupScreen> {
                                                   ..._players.map((player) {
                                                     return DropdownMenuItem<String>(
                                                       value: player['id'].toString(),
-                                                      child: Row(
-                                                        children: [
-                                                          // Profile picture
-                                                          Container(
-                                                            width: 30,
-                                                            height: 30,
-                                                            margin: EdgeInsets.only(right: 10),
-                                                            decoration: BoxDecoration(
-                                                              shape: BoxShape.circle,
-                                                              border: Border.all(
-                                                                color: AppTheme.primaryColor,
-                                                                width: 1,
+                                                      child: ConstrainedBox(
+                                                        constraints: BoxConstraints(maxWidth: 300), 
+                                                        child: Row(
+                                                          children: [
+                                                            // Profile picture
+                                                            Container(
+                                                              width: 30,
+                                                              height: 30,
+                                                              margin: EdgeInsets.only(right: 10),
+                                                              decoration: BoxDecoration(
+                                                                shape: BoxShape.circle,
+                                                                border: Border.all(
+                                                                  color: AppTheme.primaryColor,
+                                                                  width: 1,
+                                                                ),
+                                                              ),
+                                                              child: ClipOval(
+                                                                child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
+                                                                    ? Image.network(
+                                                                        player['profile_picture'],
+                                                                        fit: BoxFit.cover,
+                                                                        errorBuilder: (context, error, stackTrace) {
+                                                                          return _buildDefaultAvatar(small: true);
+                                                                        },
+                                                                      )
+                                                                    : _buildDefaultAvatar(small: true),
                                                               ),
                                                             ),
-                                                            child: ClipOval(
-                                                              child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
-                                                                  ? Image.network(
-                                                                      player['profile_picture'],
-                                                                      fit: BoxFit.cover,
-                                                                      errorBuilder: (context, error, stackTrace) {
-                                                                        return _buildDefaultAvatar(small: true);
-                                                                      },
-                                                                    )
-                                                                  : _buildDefaultAvatar(small: true),
+                                                            // Player name
+                                                            Expanded(
+                                                              child: Text(
+                                                                player['name'],
+                                                                overflow: TextOverflow.ellipsis,
+                                                              ),
                                                             ),
-                                                          ),
-                                                          // Player name
-                                                          Expanded(
-                                                            child: Text(
-                                                              player['name'],
-                                                              overflow: TextOverflow.ellipsis,
-                                                            ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     );
                                                   }).toList(),
@@ -638,40 +644,43 @@ class _MatchSetupScreenState extends State<MatchSetupScreen> {
                                                   ..._players.map((player) {
                                                     return DropdownMenuItem<String>(
                                                       value: player['id'].toString(),
-                                                      child: Row(
-                                                        children: [
-                                                          // Profile picture
-                                                          Container(
-                                                            width: 30,
-                                                            height: 30,
-                                                            margin: EdgeInsets.only(right: 10),
-                                                            decoration: BoxDecoration(
-                                                              shape: BoxShape.circle,
-                                                              border: Border.all(
-                                                                color: AppTheme.primaryColor,
-                                                                width: 1,
+                                                      child: ConstrainedBox(
+                                                        constraints: BoxConstraints(maxWidth: 300), 
+                                                        child: Row(
+                                                          children: [
+                                                            // Profile picture
+                                                            Container(
+                                                              width: 30,
+                                                              height: 30,
+                                                              margin: EdgeInsets.only(right: 10),
+                                                              decoration: BoxDecoration(
+                                                                shape: BoxShape.circle,
+                                                                border: Border.all(
+                                                                  color: AppTheme.primaryColor,
+                                                                  width: 1,
+                                                                ),
+                                                              ),
+                                                              child: ClipOval(
+                                                                child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
+                                                                    ? Image.network(
+                                                                        player['profile_picture'],
+                                                                        fit: BoxFit.cover,
+                                                                        errorBuilder: (context, error, stackTrace) {
+                                                                          return _buildDefaultAvatar(small: true);
+                                                                        },
+                                                                      )
+                                                                    : _buildDefaultAvatar(small: true),
                                                               ),
                                                             ),
-                                                            child: ClipOval(
-                                                              child: player['profile_picture'] != null && player['profile_picture'].toString().isNotEmpty
-                                                                  ? Image.network(
-                                                                      player['profile_picture'],
-                                                                      fit: BoxFit.cover,
-                                                                      errorBuilder: (context, error, stackTrace) {
-                                                                        return _buildDefaultAvatar(small: true);
-                                                                      },
-                                                                    )
-                                                                  : _buildDefaultAvatar(small: true),
+                                                            // Player name
+                                                            Expanded(
+                                                              child: Text(
+                                                                player['name'],
+                                                                overflow: TextOverflow.ellipsis,
+                                                              ),
                                                             ),
-                                                          ),
-                                                          // Player name
-                                                          Expanded(
-                                                            child: Text(
-                                                              player['name'],
-                                                              overflow: TextOverflow.ellipsis,
-                                                            ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     );
                                                   }).toList(),
